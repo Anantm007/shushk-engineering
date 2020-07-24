@@ -16,6 +16,15 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 
 
+//Connecting to the database
+mongoose.promise = global.Promise;
+mongoose.connect(process.env.MongoURI,{useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true}, (err,db)=> {
+    if(err)
+    console.log(err);
+
+    else
+    console.log('Database Connected...');
+});
 
 // Getting data in json format
 app.use(bodyParser.json())
