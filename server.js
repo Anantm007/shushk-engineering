@@ -46,6 +46,10 @@ app.get("/api", (req, res) => {
     });
 })
 
+// Mounting the routes
+app.use("/api/adminUser/auth", require("./routes/adminUserAuth"));
+app.use("/api/adminUser", require("./routes/adminUser"));
+
 
 // Starting the server
 app.listen(process.env.PORT || 5000, ()=>{
