@@ -11,7 +11,7 @@ const Landing = () => {
 		<Fragment>
 			<Navbar />
 			<section>
-				<div className="dark-overlay" className={styles.landingHeading}>
+				<div className={styles.landingHeading}>
 					<div className="landing-inner">
 						<h1 className="x-large">Shushk Engineering</h1>
 						<p className="lead">Buy products from us</p>

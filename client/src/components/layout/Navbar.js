@@ -30,7 +30,7 @@ const Navbar = () => {
 						className="navbar-toggler"
 					>
 						<span className="navbar-toggler-icon">
-							<i class="fas fa-bars" style={{ color: '#fff', fontSize: '28px' }} />
+							<i className="fas fa-bars" style={{ color: '#fff', fontSize: '28px' }} />
 						</span>
 					</button>
 					<div id="navbarSupportedContent" className="collapse navbar-collapse">
