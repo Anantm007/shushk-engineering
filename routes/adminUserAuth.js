@@ -41,7 +41,7 @@ router.post('/',
     const { name, email, password } = req.body;
   
     try {
-      let user = await User.findOne({ email });
+      let user = await AdminUser.findOne({ email });
 
       // User already registered
       if (user) {
@@ -95,7 +95,7 @@ router.post('/',
 
       // If signup fails due to any reason
     } catch (err) {
-      return res.json({
+      return res.status(500).json({
         success: false,
         message: err.message
       });
