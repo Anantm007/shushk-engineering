@@ -1,13 +1,20 @@
 import React from 'react';
-import Navbar from './components/layout/Navbar';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
+// Layout
 import Landing from './components/layout/Landing';
+import NotFound from './components/layout/NotFound';
+
 import './App.css';
 
 const App = () => (
-  <div>
-    <Navbar />
-    <Landing />
-  </div>
+	<Router>
+		<Switch>
+			<Route exact path="/" component={Landing} />
+
+			<Route component={NotFound} />
+		</Switch>
+	</Router>
 );
 
 export default App;
