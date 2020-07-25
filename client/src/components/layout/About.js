@@ -10,7 +10,7 @@ const About = () => {
 				<div class="container">
 					<div class="row about-container">
 						<div class="col-lg-7 content order-lg-1 order-2">
-							<h2 class="title">Few Words About Us</h2>
+							<h1 class="title">Few Words About Our Business</h1>
 							<p>
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 								incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -22,7 +22,7 @@ const About = () => {
 									<i class="fa fa-shopping-bag" />
 								</div>
 								<h4 class="title">
-									<a href="">Eiusmod Tempor</a>
+									<p style={{color: "#0000FF"}}>Eiusmod Tempor</p>
 								</h4>
 								<p class="description">
 									Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum
@@ -35,7 +35,7 @@ const About = () => {
 									<i class="fa fa-photo" />
 								</div>
 								<h4 class="title">
-									<a href="">Magni Dolores</a>
+									<a style={{color: "#0000FF"}}>Magni Dolores</a>
 								</h4>
 								<p class="description">
 									Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
@@ -48,7 +48,7 @@ const About = () => {
 									<i class="fa fa-bar-chart" />
 								</div>
 								<h4 class="title">
-									<a href="">Dolor Sitema</a>
+									<a style={{color: "#0000FF"}}>Dolor Sitema</a>
 								</h4>
 								<p class="description">
 									Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
@@ -67,16 +67,15 @@ const About = () => {
 									</h4>{' '}
 									<br />
 									<p> LLP, 881/17 </p>
-									<p>Faridabad, Haryana</p>
+									<p>Faridabad, Haryana - 121002</p>
 									<p>India</p>
-									<p>121002</p>
 									<p>
 										<strong>Contact Email:</strong>{' '}
 										<a href="mailto:a.sharma@shushk.in"> a.sharma@shushk.in</a>
 									</p>
 									<p>
 										<strong>Contact Number:</strong>{' '}
-										<a href="https://wa.me/8447727837">+8447727837</a>
+										<a href="https://wa.me/8447727837">+918447727837</a>
 									</p>
 								</div>
 							</div>

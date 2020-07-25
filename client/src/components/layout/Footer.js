@@ -4,8 +4,8 @@ const Footer = () => {
 	return (
 		<Fragment>
 			<footer
-				className="page-footer font-small cyan darken-3 "
-				style={{ background: '#ebecf1', padding: '0rem', maxHeight: '10rem' }}
+				className="page-footer font-small cyan darken-3 bg-dark"
+				style={{ padding: '0rem', maxHeight: '10rem' }}
 			>
 				<div className="container">
 					<div className="row">
@@ -28,7 +28,7 @@ const Footer = () => {
 					</div>
 				</div>
 
-				<div className="footer-copyright text-center py-3">© 2020 Copyright: Shushk Engineering</div>
+				<div className="footer-copyright text-center py-3" style={{color: 'white'}}>© {new Date().getFullYear()} Copyright: Shushk Engineering</div>
 			</footer>
 		</Fragment>
 	);
