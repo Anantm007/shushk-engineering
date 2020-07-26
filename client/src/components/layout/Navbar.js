@@ -39,6 +39,11 @@ const Navbar = () => {
           <div id="navbarSupportedContent" className="collapse navbar-collapse">
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
+                <a href="/payment" className={styles.navLink}>
+                  Payment
+                </a>
+              </li>
+              <li className="nav-item">
                 <a href="/about" className={styles.navLink}>
                   About Us
                 </a>
