@@ -9,15 +9,20 @@ const Navbar = () => {
 
   return (
     <BrowserRouter>
-      <nav className="navbar fixed-top navbar-expand-lg py-3 navbarbg shadow-sm bg-dark">
-        <div className="container">
+      <nav
+        className="navbar fixed-top navbar-expand-lg py-3 navbarbg shadow-sm"
+        style={{ background: "#595959" }}>
+        <div
+          className="container"
+          style={{ marginTop: "-1.5rem", marginBottom: "-1.2rem" }}>
           <a href="/" className="navbar-brand">
             <img
               src={Logo}
               alt="logo"
-              width="210"
-              height="60"
+              width="245"
+              height="75"
               className="d-inline-block align-middle mr-2"
+              style={{ paddingTop: "0" }}
             />
           </a>
           <button
@@ -27,8 +32,7 @@ const Navbar = () => {
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
             aria-label="Toggle navigation"
-            className="navbar-toggler"
-          >
+            className="navbar-toggler">
             <span className="navbar-toggler-icon">
               <i
                 className="fas fa-bars"

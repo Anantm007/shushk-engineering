@@ -11,8 +11,7 @@ const Product = ({ name, description, image }) => {
       <FadeIn>
         <div
           className="container py-5"
-          style={{ textAlign: "center", margin: "auto" }}
-        >
+          style={{ textAlign: "center", margin: "auto" }}>
           <div className="container">
             <div className="shop-default shop-cards shop-tech">
               <div className="row">
@@ -30,8 +29,7 @@ const Product = ({ name, description, image }) => {
                           }}
                         />
                       </a>
-
-                      <span class="product-ribbon product-ribbon-right product-ribbon--style-1 bg-blue text-uppercase">
+                      <span className="product-ribbon product-ribbon-right product-ribbon--style-1 bg-blue text-uppercase">
                         New
                       </span>
                     </div>
@@ -40,14 +38,51 @@ const Product = ({ name, description, image }) => {
                         <h4 href="#">{name}</h4>
                       </h3>
                       <p className="product-description">{description}</p>
+                      <div className="product-colors mt-2">
+                        <a
+                          href="https://res.cloudinary.com/dazkmglmc/image/upload/v1595758111/3_yyr34w.jpg"
+                          target="_blank">
+                          <img
+                            src="https://res.cloudinary.com/dazkmglmc/image/upload/v1595758111/3_yyr34w.jpg"
+                            style={{
+                              height: "2rem",
+                              width: "2rem",
+                              margin: ".5rem",
+                            }}
+                          />
+                        </a>
+                        <a
+                          href="https://res.cloudinary.com/dazkmglmc/image/upload/v1595758108/2_tjck0l.jpg"
+                          target="_blank">
+                          <img
+                            src="https://res.cloudinary.com/dazkmglmc/image/upload/v1595758108/2_tjck0l.jpg"
+                            style={{
+                              height: "2rem",
+                              width: "2rem",
+                              margin: ".5rem",
+                            }}
+                          />
+                        </a>
+                        <a
+                          href="https://res.cloudinary.com/dazkmglmc/image/upload/v1595758111/4_hzw0la.jpg"
+                          target="_blank">
+                          <img
+                            src="https://res.cloudinary.com/dazkmglmc/image/upload/v1595758111/4_hzw0la.jpg"
+                            style={{
+                              height: "2rem",
+                              width: "2rem",
+                              margin: ".5rem",
+                            }}
+                          />
+                        </a>
+                      </div>
                       <div className="product-buttons mt-4">
                         <div className="row align-items-center">
                           <div className="col-8">
                             <div className={styles.buyButton}>
                               <button
                                 type="button btn-block"
-                                className="btn btn-block btn-primary btn-circle btn-icon-left"
-                              >
+                                className="btn btn-block btn-primary btn-circle btn-icon-left">
                                 <i className="fa fa-shopping-cart"></i>
                                 &nbsp;&nbsp; Buy Now
                               </button>
