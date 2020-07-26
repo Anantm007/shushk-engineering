@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import Navbar from "./Navbar";
 import Introduction from "./Introduction";
 import Info from "./Info";
-import Product from "./Product";
+import Products from "./Products";
 import Footer from "./Footer";
 
 const Landing = () => {
@@ -11,7 +11,7 @@ const Landing = () => {
       <Navbar />
       <Introduction />
       <Info />
-      <Product />
+      <Products />
       <Footer />
     </Fragment>
   );
