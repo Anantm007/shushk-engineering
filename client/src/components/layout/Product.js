@@ -3,7 +3,8 @@ import FadeIn from "./FadeIn";
 
 import { makeStyles } from "@material-ui/core/styles";
 
-const Product = ({ name, description, image }) => {
+const Product = ({ product }) => {
+  const { name, description, image, secondaryImages } = product;
   const styles = useStyles();
 
   return (
@@ -18,7 +19,7 @@ const Product = ({ name, description, image }) => {
                 <div className="col-md-6">
                   <div className="block product no-border z-depth-2-top z-depth-2--hover">
                     <div className="block-image">
-                      <a href="#">
+                      <a href={image} target="_blank">
                         <img
                           src={image}
                           className="img-center"
@@ -39,42 +40,20 @@ const Product = ({ name, description, image }) => {
                       </h3>
                       <p className="product-description">{description}</p>
                       <div className="product-colors mt-2">
-                        <a
-                          href="https://res.cloudinary.com/dazkmglmc/image/upload/v1595758111/3_yyr34w.jpg"
-                          target="_blank">
-                          <img
-                            src="https://res.cloudinary.com/dazkmglmc/image/upload/v1595758111/3_yyr34w.jpg"
-                            style={{
-                              height: "2rem",
-                              width: "2rem",
-                              margin: ".5rem",
-                            }}
-                          />
-                        </a>
-                        <a
-                          href="https://res.cloudinary.com/dazkmglmc/image/upload/v1595758108/2_tjck0l.jpg"
-                          target="_blank">
-                          <img
-                            src="https://res.cloudinary.com/dazkmglmc/image/upload/v1595758108/2_tjck0l.jpg"
-                            style={{
-                              height: "2rem",
-                              width: "2rem",
-                              margin: ".5rem",
-                            }}
-                          />
-                        </a>
-                        <a
-                          href="https://res.cloudinary.com/dazkmglmc/image/upload/v1595758111/4_hzw0la.jpg"
-                          target="_blank">
-                          <img
-                            src="https://res.cloudinary.com/dazkmglmc/image/upload/v1595758111/4_hzw0la.jpg"
-                            style={{
-                              height: "2rem",
-                              width: "2rem",
-                              margin: ".5rem",
-                            }}
-                          />
-                        </a>
+                        {secondaryImages.map((img, index) => {
+                          return (
+                            <a href={img} target="_blank">
+                              <img
+                                src={img}
+                                style={{
+                                  height: "2rem",
+                                  width: "2rem",
+                                  margin: ".5rem",
+                                }}
+                              />
+                            </a>
+                          );
+                        })}
                       </div>
                       <div className="product-buttons mt-4">
                         <div className="row align-items-center">

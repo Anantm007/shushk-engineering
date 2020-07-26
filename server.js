@@ -47,6 +47,7 @@ app.use(morgan("dev"));
 // Mounting the routes
 app.use("/api/adminUser/auth", require("./routes/adminUserAuth"));
 app.use("/api/adminUser", require("./routes/adminUser"));
+app.use("/api/item", require("./routes/item"));
 
 // Serve Static Assets in production
 if (process.env.NODE_ENV === "production") {

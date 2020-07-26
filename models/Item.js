@@ -12,9 +12,9 @@ const ItemSchema = new Schema(
       type: String,
       required: true,
     },
-    secondaryImags: [
+    secondaryImages: [
       {
-        type: string,
+        type: String,
       },
     ],
     description: {
