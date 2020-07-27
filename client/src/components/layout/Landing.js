@@ -11,7 +11,7 @@ const Landing = () => {
       <Navbar />
       <Introduction />
       <Info />
-      <Products />
+      {/* <Products /> */}
       <Footer />
     </Fragment>
   );
