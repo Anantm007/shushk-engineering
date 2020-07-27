@@ -46,7 +46,7 @@ const Product = ({ product, index }) => {
                 src={image}
                 style={{
                   height: "25rem",
-                  width: "15rem",
+                  width: "14rem",
                   margin: ".5rem",
                 }}
               />
@@ -57,8 +57,8 @@ const Product = ({ product, index }) => {
                   <img
                     src={img}
                     style={{
-                      height: "3rem",
-                      width: "3rem",
+                      height: "2.8rem",
+                      width: "2.8rem",
                       margin: ".5rem",
                     }}
                   />
@@ -86,6 +86,8 @@ const Product = ({ product, index }) => {
       </FadeIn>
       {index % 2 === 0 ? (
         <>
+          <br />
+          <br />
           <br />
           <br />
         </>

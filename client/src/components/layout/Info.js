@@ -38,7 +38,7 @@ const Info = () => {
               <div className="row align-items-center mb-5">
                 {products.map((product, index) => {
                   return (
-                    <Fragment>
+                    <Fragment key={index}>
                       <Product product={product} index={index} />
                     </Fragment>
                   );
