@@ -31,7 +31,7 @@ const Info = () => {
   return (
     <Fragment>
       <FadeIn>
-        <div className="bg-white py-5">
+        <div className="py-5" style={{ background: "#afaed4" }}>
           <div className="container py-5">
             <FadeIn>
               {showLoading()}
