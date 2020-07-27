@@ -43,6 +43,9 @@ router.post(
   }
 );
 
+// @route   GET /api/item
+// @desc    Get all items
+// @access  Public
 router.get("/", async (req, res) => {
   try {
     const items = await Item.find({});
@@ -54,6 +57,26 @@ router.get("/", async (req, res) => {
     }
 
     return res.status(200).json({ success: true, items });
+  } catch (err) {
+    console.log(err);
+    return res.status(500).json({ success: false, message: "Server Error" });
+  }
+});
+
+// @route   GET /api/item/:id
+// @desc    Get a particular item
+// @access  Public
+router.get("/:id", async (req, res) => {
+  try {
+    const item = await Item.findById(req.params.id);
+
+    if (!item) {
+      return res
+        .status(404)
+        .json({ success: false, message: "Item not found" });
+    }
+
+    return res.status(200).json({ success: true, item });
   } catch (err) {
     console.log(err);
     return res.status(500).json({ success: false, message: "Server Error" });

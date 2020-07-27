@@ -4,7 +4,7 @@ import FadeIn from "./FadeIn";
 import { makeStyles } from "@material-ui/core/styles";
 
 const Product = ({ product }) => {
-  const { name, description, image, secondaryImages } = product;
+  const { _id, name, description, image, secondaryImages } = product;
   const styles = useStyles();
 
   return (
@@ -36,18 +36,18 @@ const Product = ({ product }) => {
                     </div>
                     <div className="block-body text-center">
                       <h3 className="heading heading-5 strong-600 text-capitalize">
-                        <h4 href="#">{name}</h4>
+                        <h4>{name}</h4>
                       </h3>
                       <p className="product-description">{description}</p>
                       <div className="product-colors mt-2">
                         {secondaryImages.map((img, index) => {
                           return (
-                            <a href={img} target="_blank">
+                            <a href={img} target="_blank" key={index}>
                               <img
                                 src={img}
                                 style={{
-                                  height: "2rem",
-                                  width: "2rem",
+                                  height: "3rem",
+                                  width: "3rem",
                                   margin: ".5rem",
                                 }}
                               />
@@ -59,12 +59,14 @@ const Product = ({ product }) => {
                         <div className="row align-items-center">
                           <div className="col-8">
                             <div className={styles.buyButton}>
-                              <button
-                                type="button btn-block"
-                                className="btn btn-block btn-primary btn-circle btn-icon-left">
-                                <i className="fa fa-shopping-cart"></i>
-                                &nbsp;&nbsp; Buy Now
-                              </button>
+                              <a href={`/product/${_id}`}>
+                                <button
+                                  type="button btn-block"
+                                  className="btn btn-block btn-primary btn-circle btn-icon-left">
+                                  <i className="fa fa-shopping-cart"></i>
+                                  &nbsp;&nbsp; Buy Now
+                                </button>
+                              </a>
                             </div>
                           </div>
                         </div>
