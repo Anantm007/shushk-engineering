@@ -16,7 +16,8 @@ const Checkout = (props) => {
     address: "",
     zipCode: "",
     phoneNumber: "",
-    quantity: "",
+    quantity: undefined,
+    total: 0,
     error: "",
     success: false,
   });
@@ -28,6 +29,7 @@ const Checkout = (props) => {
     zipCode,
     phoneNumber,
     quantity,
+    total,
     success,
     error,
   } = values;
@@ -49,6 +51,9 @@ const Checkout = (props) => {
 
   const handleChange = (name) => (e) => {
     setValues({ ...values, error: false, [name]: e.target.value });
+    if (name === "quantity") {
+      setValues({ ...values, total: product.pricePerUnit * e.target.value });
+    }
   };
 
   const showLoading = () => {
@@ -141,7 +146,7 @@ const Checkout = (props) => {
                           />
                         </div>
                         <div>
-                          <h3>Total Amount: Rs. 100</h3> <br />
+                          <h3>Total Amount: Rs. {total}</h3> <br />
                         </div>
                         <div class="d-flex flex-row align-items-center justify-content-between">
                           <button

@@ -4,7 +4,15 @@ import FadeIn from "./FadeIn";
 import { makeStyles } from "@material-ui/core/styles";
 
 const Product = ({ product }) => {
-  const { _id, name, description, image, secondaryImages } = product;
+  const {
+    _id,
+    name,
+    subHeading,
+    description,
+    image,
+    secondaryImages,
+    pricePerUnit,
+  } = product;
   const styles = useStyles();
 
   return (
@@ -38,7 +46,7 @@ const Product = ({ product }) => {
                       <h3 className="heading heading-5 strong-600 text-capitalize">
                         <h4>{name}</h4>
                       </h3>
-                      <p className="product-description">{description}</p>
+                      <p className="product-description">{subHeading}</p>
                       <div className="product-colors mt-2">
                         {secondaryImages.map((img, index) => {
                           return (
@@ -54,8 +62,15 @@ const Product = ({ product }) => {
                             </a>
                           );
                         })}
+                        <br />
+                        <br />
+                        <p className="product-description">
+                          {description.substring(0, 120)}...
+                        </p>
+                        <br />
+                        <h5>Price per Unit: Rs. {pricePerUnit}</h5>
                       </div>
-                      <div className="product-buttons mt-4">
+                      <div className="product-buttons mt-3">
                         <div className="row align-items-center">
                           <div className="col-8">
                             <div className={styles.buyButton}>

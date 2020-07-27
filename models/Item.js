@@ -8,6 +8,14 @@ const ItemSchema = new Schema(
       type: String,
       required: true,
     },
+    subHeading: {
+      type: String,
+      default: "",
+    },
+    pricePerUnit: {
+      type: Number,
+      default: 0,
+    },
     image: {
       type: String,
       required: true,
