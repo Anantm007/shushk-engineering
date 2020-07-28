@@ -89,7 +89,7 @@ const Checkout = (props) => {
                             class="form-control"
                             value={name}
                             onChange={handleChange("name")}
-                            placeholder="Your Name*"
+                            placeholder="Name*"
                             required
                           />
                         </div>
@@ -99,7 +99,7 @@ const Checkout = (props) => {
                             class="form-control"
                             value={email}
                             onChange={handleChange("email")}
-                            placeholder="Your Email*"
+                            placeholder="Email*"
                             required
                           />
                         </div>
@@ -109,7 +109,7 @@ const Checkout = (props) => {
                             class="form-control"
                             value={address}
                             onChange={handleChange("address")}
-                            placeholder="Your Address*"
+                            placeholder="Address*"
                             required
                           />
                         </div>
@@ -119,7 +119,7 @@ const Checkout = (props) => {
                             class="form-control"
                             value={zipCode}
                             onChange={handleChange("zipCode")}
-                            placeholder="Your Pin Code*"
+                            placeholder="Pin Code*"
                             required
                           />
                         </div>
@@ -129,7 +129,7 @@ const Checkout = (props) => {
                             class="form-control"
                             value={phoneNumber}
                             onChange={handleChange("phoneNumber")}
-                            placeholder="Your Contact Number*"
+                            placeholder="Contact Number*"
                             required
                           />
                         </div>

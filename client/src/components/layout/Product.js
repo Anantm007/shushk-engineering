@@ -18,17 +18,24 @@ const Product = ({ product, index }) => {
   return (
     <Fragment>
       <FadeIn>
-        <div className="row">
+        <div
+          className="row"
+          style={{
+            border: "1px solid #595959",
+            borderRadius: "1rem",
+            background: "#afaed4",
+            marginTop: "3rem",
+          }}>
           <div className="col-lg-6">
             <h1 className="font-weight-light">{name}</h1>
             <h5>{subHeading}</h5>
             <p>{description}</p>
+            <hr style={{ color: "red" }} />
             <h4>Product specifications:</h4>
-            <p className="font-italic text-muted mb-4">
-              {renderHTML(product.specification)}
-            </p>
+            <p className="mb-4">{renderHTML(product.specification)}</p>
             <h5>
-              <strong>Price per Unit: Rs. {pricePerUnit}</strong>
+              <hr />
+              <strong>Price per Unit: ₹ {pricePerUnit}</strong>
             </h5>
           </div>
           <div className="col-lg-6 px-5 mx-auto">
@@ -44,16 +51,18 @@ const Product = ({ product, index }) => {
             </a>
             {secondaryImages.map((img, index) => {
               return (
-                <a href={img} target="_blank" key={index}>
-                  <img
-                    src={img}
-                    style={{
-                      height: "2.8rem",
-                      width: "2.8rem",
-                      margin: ".5rem",
-                    }}
-                  />
-                </a>
+                <Fragment>
+                  <a href={img} target="_blank" key={index}>
+                    <img
+                      src={img}
+                      style={{
+                        height: "3rem",
+                        width: "3rem",
+                        margin: ".5rem",
+                      }}
+                    />
+                  </a>
+                </Fragment>
               );
             })}
             <div className="product-buttons mt-3">

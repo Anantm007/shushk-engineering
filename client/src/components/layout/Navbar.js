@@ -25,6 +25,9 @@ const Navbar = () => {
               style={{ paddingTop: "0" }}
             />
           </a>
+          <div className={styles.mainHeading}>
+            <h3>Shushk Engineering LLP</h3>
+          </div>
           <button
             type="button"
             data-toggle="collapse"
@@ -42,11 +45,6 @@ const Navbar = () => {
           </button>
           <div id="navbarSupportedContent" className="collapse navbar-collapse">
             <ul className="navbar-nav ml-auto">
-              <li className="nav-item">
-                <a href="/payment" className={styles.navLink}>
-                  Payment
-                </a>
-              </li>
               <li className="nav-item">
                 <a href="/about" className={styles.navLink}>
                   About Us
@@ -67,6 +65,14 @@ const useStyles = makeStyles({
     margin: ".5em",
     "&:hover": {
       color: "white",
+    },
+  },
+  mainHeading: {
+    color: "white",
+    "@media screen and (min-width: 960px)": {
+      color: "white",
+      fontSize: "2rem",
+      marginLeft: "8rem",
     },
   },
 });

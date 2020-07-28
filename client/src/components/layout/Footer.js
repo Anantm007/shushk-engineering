@@ -30,6 +30,11 @@ const Footer = () => {
                     {" "}
                   </i>
                 </a>
+                <a className="ins-ic" href="https://reddit.com">
+                  <i className="fab fa-reddit fa-sm white-text mr-md-5 mr-3 fa-2x">
+                    {" "}
+                  </i>
+                </a>
               </div>
             </div>
           </div>
