@@ -25,9 +25,7 @@ const Navbar = () => {
               style={{ paddingTop: "0" }}
             />
           </a>
-          <div className={styles.mainHeading}>
-            <h3>Shushk Engineering LLP</h3>
-          </div>
+          <div className={styles.mainHeading}>Shushk Engineering LLP</div>
           <button
             type="button"
             data-toggle="collapse"
@@ -69,6 +67,10 @@ const useStyles = makeStyles({
   },
   mainHeading: {
     color: "white",
+    "@media screen and (max-width: 400px)": {
+      color: "white",
+      fontSize: "1.2rem",
+    },
     "@media screen and (min-width: 960px)": {
       color: "white",
       fontSize: "2rem",
