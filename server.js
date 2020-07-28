@@ -48,7 +48,7 @@ app.use(morgan("dev"));
 app.use("/api/adminUser/auth", require("./routes/adminUserAuth"));
 app.use("/api/adminUser", require("./routes/adminUser"));
 app.use("/api/item", require("./routes/item"));
-app.use("/api/visitorCount", require("./routes/visitorCount"));
+app.use("/api/visitorCount", require("./routes/VisitorCount"));
 
 // Serve Static Assets in production
 if (process.env.NODE_ENV === "production") {
