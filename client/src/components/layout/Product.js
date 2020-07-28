@@ -58,6 +58,7 @@ const Product = ({ product, index }) => {
                         style={{
                           height: "4.5rem",
                           width: "2.8rem",
+                          border: "1.5px solid grey",
                         }}
                       />
                     </a>
@@ -79,6 +80,7 @@ const Product = ({ product, index }) => {
                         height: "4.5rem",
                         width: "2.8rem",
                         margin: ".5rem",
+                        border: "1.5px solid grey",
                       }}
                     />
                   </a>
@@ -145,6 +147,7 @@ const useStyles = makeStyles({
     height: "25rem",
     width: "14rem",
     margin: ".5rem",
+    border: "1.5px solid grey",
     "@media screen and (min-width: 960px)": {
       margin: "2.2rem 0 0 2rem",
     },
