@@ -29,6 +29,10 @@ const ItemSchema = new Schema(
       type: String,
       required: true,
     },
+    specification: {
+      type: String,
+      required: true,
+    },
   },
   { timestamps: true }
 );
