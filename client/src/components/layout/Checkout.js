@@ -30,8 +30,6 @@ const Checkout = (props) => {
     phoneNumber,
     quantity,
     total,
-    success,
-    error,
   } = values;
 
   const loadItem = async (id) => {

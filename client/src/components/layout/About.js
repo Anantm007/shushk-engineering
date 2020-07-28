@@ -36,13 +36,14 @@ const About = () => {
                 <div
                   className="icon-box"
                   data-aos="fade-up"
-                  data-aos-delay="200"
-                >
+                  data-aos-delay="200">
                   <div className="icon">
                     <i className="fa fa-photo" />
                   </div>
                   <h4 className="title">
-                    <a style={{ color: "#0000FF" }}>Magni Dolores</a>
+                    <p style={{ color: "#0000FF" }} hre>
+                      Magni Dolores
+                    </p>
                   </h4>
                   <p className="description">
                     Excepteur sint occaecat cupidatat non proident, sunt in
@@ -53,13 +54,12 @@ const About = () => {
                 <div
                   className="icon-box"
                   data-aos="fade-up"
-                  data-aos-delay="300"
-                >
+                  data-aos-delay="300">
                   <div className="icon">
                     <i className="fa fa-bar-chart" />
                   </div>
                   <h4 className="title">
-                    <a style={{ color: "#0000FF" }}>Dolor Sitema</a>
+                    <p style={{ color: "#0000FF" }}>Dolor Sitema</p>
                   </h4>
                   <p className="description">
                     Minim veniam, quis nostrud exercitation ullamco laboris nisi
