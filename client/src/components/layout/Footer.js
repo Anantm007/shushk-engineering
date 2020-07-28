@@ -1,8 +1,22 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect, useState } from "react";
+import { getCount } from "./apiCore";
 
 const Footer = () => {
+  const [visitorCount, setVisitorCount] = useState(0);
+
+  useEffect(() => {
+    getCount().then((data) => {
+      if (data.success === true) {
+        setVisitorCount(data.visitorCount);
+      }
+    });
+  }, []); //eslint-disable-line
+
   return (
     <Fragment>
+      <br />
+      <br />
+      <br />
       <footer
         className="page-footer font-small cyan darken-3"
         style={{ padding: "0rem", maxHeight: "10rem", background: "#595959" }}>
@@ -35,6 +49,13 @@ const Footer = () => {
                     {" "}
                   </i>
                 </a>
+                <h4
+                  style={{
+                    marginTop: "1rem",
+                    color: "white",
+                  }}>
+                  Total Visits: {visitorCount}
+                </h4>
               </div>
             </div>
           </div>

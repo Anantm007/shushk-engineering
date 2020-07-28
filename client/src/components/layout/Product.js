@@ -35,8 +35,7 @@ const Product = ({ product, index }) => {
             <p className="mb-4">{renderHTML(product.specification)}</p>
             <h5>
               <hr className={styles.hr} />
-              <strong>Price per Unit: ₹ {pricePerUnit}</strong> <br />
-              <br />
+              <strong>Price per Unit: ₹ {pricePerUnit}</strong>
             </h5>
           </div>
           <div className="col-lg-6 px-5 mx-auto">
@@ -53,14 +52,52 @@ const Product = ({ product, index }) => {
                       key={index}
                       className="d-none d-md-block d-lg-block">
                       <br />
-                      <img
-                        src={img}
-                        style={{
-                          height: "4.5rem",
-                          width: "2.8rem",
-                          border: "1.5px solid grey",
-                        }}
-                      />
+                      {index === 0 && (
+                        <img
+                          src={img}
+                          style={{
+                            height: "6.4rem",
+                            width: "4rem",
+                            border: "1.5px solid grey",
+                          }}
+                        />
+                      )}
+                      {index === 1 && (
+                        <img
+                          src={img}
+                          style={{
+                            height: "4rem",
+                            width: "7.20rem",
+                            border: "1.5px solid grey",
+                          }}
+                        />
+                      )}
+                      {index === 2 && (
+                        <img
+                          src={img}
+                          style={{
+                            height: "5rem",
+                            width: "4.48rem",
+                            border: "1.5px solid grey",
+                          }}
+                        />
+                      )}
+                      {secondaryImages.length === 3 && (
+                        <>
+                          <br />
+                          <br />{" "}
+                        </>
+                      )}
+                      {index === 3 && (
+                        <img
+                          src={img}
+                          style={{
+                            height: "6.56rem",
+                            width: "5rem",
+                            border: "1.5px solid grey",
+                          }}
+                        />
+                      )}
                     </a>
                   </Fragment>
                 );
@@ -130,7 +167,7 @@ const useStyles = makeStyles({
     "@media screen and (min-width: 400px)": {
       width: "18rem",
     },
-    "@media screen and (min-width: 5500px)": {
+    "@media screen and (min-width: 550px)": {
       width: "20rem",
     },
     "@media screen and (min-width: 960px)": {
@@ -138,9 +175,12 @@ const useStyles = makeStyles({
     },
   },
   displayBig: {
-    "@media screen and (min-width: 960px)": {
-      marginLeft: "22rem",
-      marginTop: "-25rem",
+    "@media screen and (max-width: 880px)": {
+      display: "none",
+    },
+    "@media screen and (min-width: 881px)": {
+      marginLeft: "20rem",
+      marginTop: "-27rem",
     },
   },
   mainImage: {
