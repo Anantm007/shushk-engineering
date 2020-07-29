@@ -44,6 +44,13 @@ const Navbar = () => {
           <div id="navbarSupportedContent" className="collapse navbar-collapse">
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
+                <a href="/faq" className={styles.navLink}>
+                  FAQ
+                </a>
+              </li>
+            </ul>
+            <ul className="navbar-nav ml-auto">
+              <li className="nav-item">
                 <a href="/about" className={styles.navLink}>
                   About Us
                 </a>
@@ -74,7 +81,7 @@ const useStyles = makeStyles({
     "@media screen and (min-width: 960px)": {
       color: "white",
       fontSize: "2rem",
-      marginLeft: "8rem",
+      marginLeft: "6rem",
     },
   },
 });

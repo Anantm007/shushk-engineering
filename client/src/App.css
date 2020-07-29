@@ -697,3 +697,30 @@ a > .block {
   border-color: #df8c96;
   transition: 0.3s;
 }
+
+.faqHeader {
+  font-size: 2.188rem;
+  margin: 1.25rem;
+}
+
+.panel-heading [data-toggle="collapse"]:after {
+  content: "e072"; /* "play" icon */
+  float: right;
+  color: #f58723;
+  font-size: 18px;
+  line-height: 22px;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+.panel-heading [data-toggle="collapse"].collapsed:after {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+  color: #454444;
+}
