@@ -4,8 +4,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // Layout
 import Landing from "./components/layout/Landing";
 import About from "./components/layout/About";
-import Payment from "./components/layout/Payment";
-import Checkout from "./components/layout/Checkout";
+import Payment from "./components/product/Payment";
+import Checkout from "./components/product/Checkout";
 import NotFound from "./components/layout/NotFound";
 
 import "./App.css";

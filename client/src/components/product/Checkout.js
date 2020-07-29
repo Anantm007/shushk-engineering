@@ -1,9 +1,9 @@
 import React, { Fragment, useState, useEffect } from "react";
-import { getItem } from "./apiCore";
-import Spinner from "./Spinner";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
-import FadeIn from "./FadeIn";
+import { getItem } from "./apiProduct";
+import Spinner from "../layout/Spinner";
+import Navbar from "../layout/Navbar";
+import Footer from "../layout/Footer";
+import FadeIn from "../layout/FadeIn";
 
 const Checkout = (props) => {
   const productId = props.match.params.id;

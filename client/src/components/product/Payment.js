@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
-import FadeIn from "./FadeIn";
+import Navbar from "../layout/Navbar";
+import Footer from "../layout/Footer";
+import FadeIn from "../layout/FadeIn";
 
 const Payment = () => {
   return (
@@ -23,8 +23,7 @@ const Payment = () => {
                 <div className="icon-box">
                   <h5
                     className="title"
-                    style={{ marginTop: "5rem", color: "#0000FF" }}
-                  >
+                    style={{ marginTop: "5rem", color: "#0000FF" }}>
                     Account Holder:{" "}
                     <span style={{ color: "black" }}>Shushk Eng.</span>
                   </h5>
@@ -44,8 +43,7 @@ const Payment = () => {
                 <div className="card bg-light mb-3">
                   <div
                     className="card-header bg-success text-white text-uppercase"
-                    style={{ textAlign: "center" }}
-                  >
+                    style={{ textAlign: "center" }}>
                     <i className="fa fa-home" /> For any Queries:
                   </div>
                   <div className="card-body">

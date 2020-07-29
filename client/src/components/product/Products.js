@@ -1,11 +1,11 @@
 import React, { Fragment, useEffect, useState } from "react";
-import FadeIn from "./FadeIn";
-import Spinner from "./Spinner";
-import { getItems } from "./apiCore";
+import FadeIn from "../layout/FadeIn";
+import Spinner from "../layout/Spinner";
+import { getItems } from "./apiProduct";
 
 import Product from "./Product";
 
-const Info = () => {
+const Products = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -52,4 +52,4 @@ const Info = () => {
   );
 };
 
-export default Info;
+export default Products;

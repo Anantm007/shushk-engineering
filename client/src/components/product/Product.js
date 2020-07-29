@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import renderHTML from "react-render-html";
-import FadeIn from "./FadeIn";
+import FadeIn from "../layout/FadeIn";
 import { makeStyles } from "@material-ui/core/styles";
 
 const Product = ({ product, index }) => {

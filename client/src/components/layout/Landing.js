@@ -1,13 +1,13 @@
 import React, { Fragment } from "react";
 import Navbar from "./Navbar";
-import Info from "./Info";
+import Products from "../product/Products";
 import Footer from "./Footer";
 
 const Landing = () => {
   return (
     <Fragment>
       <Navbar />
-      <Info />
+      <Products />
       <Footer />
     </Fragment>
   );
