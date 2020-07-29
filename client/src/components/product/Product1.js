@@ -32,10 +32,14 @@ const Product1 = ({ product }) => {
             <p>{description}</p>
             <hr className={styles.hr} />
             <h4>Product specifications:</h4>
-            <p className="mb-4">{renderHTML(product.specification)}</p>
+            <p
+              className="mb-4 font-italic"
+              style={{ fontWeight: "normal !important" }}>
+              {renderHTML(product.specification)}
+            </p>
             <h5>
               <hr className={styles.hr} />
-              <strong>Price per Unit: ₹ {pricePerUnit}</strong>
+              <h4>Price per Unit: ₹ {pricePerUnit}</h4>
             </h5>
           </div>
           <div className="col-lg-6 px-5 mx-auto">

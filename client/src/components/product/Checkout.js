@@ -48,6 +48,9 @@ const Checkout = (props) => {
   };
 
   const handleChange = (name) => (e) => {
+    if (name === "quantity" && e.target.value < 0) {
+      return;
+    }
     setValues({ ...values, error: false, [name]: e.target.value });
     if (name === "quantity") {
       setValues({ ...values, total: product.pricePerUnit * e.target.value });

@@ -7,6 +7,10 @@
   --success-color: #28a745;
 }
 
+h6 {
+  display: inline;
+}
+
 .wrapper {
   float: right;
 }
