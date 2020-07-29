@@ -3,7 +3,8 @@ import FadeIn from "../layout/FadeIn";
 import Spinner from "../layout/Spinner";
 import { getItems } from "./apiProduct";
 
-import Product from "./Product";
+import Product1 from "./Product1";
+import Product2 from "./Product2";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -36,13 +37,8 @@ const Products = () => {
             <FadeIn>
               {showLoading()}
               <div className="row align-items-center mb-5">
-                {products.map((product, index) => {
-                  return (
-                    <Fragment key={index}>
-                      <Product product={product} index={index} />
-                    </Fragment>
-                  );
-                })}
+                {products[0] && <Product1 product={products[0]} />}
+                {products[1] && <Product2 product={products[1]} />}
               </div>
             </FadeIn>
           </div>

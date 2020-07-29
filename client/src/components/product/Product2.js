@@ -3,7 +3,7 @@ import renderHTML from "react-render-html";
 import FadeIn from "../layout/FadeIn";
 import { makeStyles } from "@material-ui/core/styles";
 
-const Product = ({ product, index }) => {
+const Product2 = ({ product }) => {
   const {
     _id,
     name,
@@ -39,22 +39,23 @@ const Product = ({ product, index }) => {
             </h5>
           </div>
           <div className="col-lg-6 px-5 mx-auto">
-            <a href={image} target="_blank">
-              <img src={image} className={styles.mainImage} />
+            <a href={image} target="_blank" rel="noopener noreferrer">
+              <img src={image} alt="mainImage" className={styles.mainImage} />
             </a>
             <div className={styles.displayBig}>
               {secondaryImages.map((img, index) => {
                 return (
-                  <Fragment>
+                  <Fragment key={index}>
                     <a
                       href={img}
+                      rel="noopener noreferrer"
                       target="_blank"
-                      key={index}
                       className="d-none d-md-block d-lg-block">
                       <br />
                       {index === 0 && (
                         <img
                           src={img}
+                          alt="secondaryImg"
                           style={{
                             height: "6.4rem",
                             width: "4rem",
@@ -65,6 +66,7 @@ const Product = ({ product, index }) => {
                       {index === 1 && (
                         <img
                           src={img}
+                          alt="secondaryImg"
                           style={{
                             height: "4rem",
                             width: "7.20rem",
@@ -75,6 +77,7 @@ const Product = ({ product, index }) => {
                       {index === 2 && (
                         <img
                           src={img}
+                          alt="secondaryImg"
                           style={{
                             height: "5rem",
                             width: "4.48rem",
@@ -91,6 +94,7 @@ const Product = ({ product, index }) => {
                       {index === 3 && (
                         <img
                           src={img}
+                          alt="secondaryImg"
                           style={{
                             height: "6.56rem",
                             width: "5rem",
@@ -105,21 +109,64 @@ const Product = ({ product, index }) => {
             </div>
             {secondaryImages.map((img, index) => {
               return (
-                <Fragment>
+                <Fragment key={index}>
                   <a
                     href={img}
                     target="_blank"
-                    key={index}
-                    className="d-lg-none">
-                    <img
-                      src={img}
-                      style={{
-                        height: "4.5rem",
-                        width: "2.8rem",
-                        margin: ".5rem",
-                        border: "1.5px solid grey",
-                      }}
-                    />
+                    rel="noopener noreferrer"
+                    className="d-lg-none"
+                    style={{ marginLeft: "1rem" }}>
+                    &nbsp; &nbsp;
+                    {index === 0 && (
+                      <img
+                        src={img}
+                        alt="secondaryImg"
+                        style={{
+                          height: "6.4rem",
+                          width: "4rem",
+                          border: "1.5px solid grey",
+                        }}
+                      />
+                    )}
+                    {index === 1 && (
+                      <img
+                        src={img}
+                        alt="secondaryImg"
+                        style={{
+                          height: "4rem",
+                          width: "7.20rem",
+                          border: "1.5px solid grey",
+                        }}
+                      />
+                    )}
+                    {index === 2 && (
+                      <img
+                        src={img}
+                        alt="secondaryImg"
+                        style={{
+                          height: "5rem",
+                          width: "4.48rem",
+                          border: "1.5px solid grey",
+                        }}
+                      />
+                    )}
+                    {secondaryImages.length === 3 && (
+                      <>
+                        <br />
+                        <br />{" "}
+                      </>
+                    )}
+                    {index === 3 && (
+                      <img
+                        src={img}
+                        alt="secondaryImg"
+                        style={{
+                          height: "6.56rem",
+                          width: "5rem",
+                          border: "1.5px solid grey",
+                        }}
+                      />
+                    )}
                   </a>
                 </Fragment>
               );
@@ -143,16 +190,6 @@ const Product = ({ product, index }) => {
           </div>
         </div>
       </FadeIn>
-      {index % 2 === 0 ? (
-        <>
-          <br />
-          <br />
-          <br />
-          <br />
-        </>
-      ) : (
-        ""
-      )}
     </Fragment>
   );
 };
@@ -197,4 +234,4 @@ const useStyles = makeStyles({
   },
 });
 
-export default Product;
+export default Product2;
