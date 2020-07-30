@@ -1,5 +1,4 @@
 import React, { Fragment, useState, useEffect } from "react";
-import { Redirect } from "react-router-dom";
 import { getItem } from "./apiProduct";
 import Spinner from "../layout/Spinner";
 import Navbar from "../layout/Navbar";
