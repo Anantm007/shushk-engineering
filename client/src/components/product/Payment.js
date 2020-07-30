@@ -48,7 +48,7 @@ const Payment = () => {
                   </div>
                   <div className="card-body">
                     <h4>
-                      <h4>Shushk Engineering</h4>
+                      <h4>Shushk Engineering LLP</h4>
                     </h4>
                     <br />
                     <p>
@@ -58,6 +58,9 @@ const Payment = () => {
                     <p>
                       <h6>Contact Number: </h6>
                       <a href="https://wa.me/8447727837">+918447727837</a>
+                      <p style={{ textAlign: "center" }}>
+                        (Click to open Whastapp Chat)
+                      </p>
                     </p>
                   </div>
                 </div>

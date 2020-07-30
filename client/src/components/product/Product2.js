@@ -22,7 +22,7 @@ const Product2 = ({ product }) => {
           style={{
             border: "1px solid #595959",
             borderRadius: "1rem",
-            background: "#afaed4",
+            background: "#b0eec0",
             margin: ".5rem",
           }}>
           <div className="col-lg-6">

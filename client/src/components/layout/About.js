@@ -73,9 +73,9 @@ const About = () => {
                     <i className="fa fa-home" /> Contact Details
                   </div>
                   <div className="card-body">
-                    <h4>Shushk Engineering</h4>
+                    <h4>Shushk Engineering LLP</h4>
                     <br />
-                    <p> LLP, 881/17 </p>
+                    <p> 881/17 </p>
                     <p>Faridabad, Haryana - 121002</p>
                     <p>India</p>
                     <p>
@@ -85,6 +85,9 @@ const About = () => {
                     <p>
                       <h6>Contact Number: </h6>
                       <a href="https://wa.me/8447727837">+918447727837</a>
+                      <p style={{ textAlign: "center" }}>
+                        (Click to open Whastapp Chat)
+                      </p>
                     </p>
                   </div>
                 </div>

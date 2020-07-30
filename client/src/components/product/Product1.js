@@ -39,6 +39,18 @@ const Product1 = ({ product }) => {
             </p>
             <hr className={styles.hr} />
             <h4>Price per Unit: ₹ {pricePerUnit}</h4>
+            <a href="/faq" target="_blank" rel="noopener noreferrer">
+              <button
+                className="btn btn btn-primary"
+                style={{
+                  margin: "1rem",
+                  width: "12rem",
+                  backgroundColor: "#0000FF",
+                  border: "none",
+                }}>
+                FAQ
+              </button>
+            </a>
           </div>
           <div className="col-lg-6 px-5 mx-auto">
             <a href={image} target="_blank" rel="noopener noreferrer">
