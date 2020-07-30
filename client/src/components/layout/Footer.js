@@ -25,29 +25,19 @@ const Footer = () => {
             <div className="col-md-12 py-5">
               <div className="flex-center" style={{ marginBottom: "-5rem" }}>
                 <a className="fb-ic" href="https://facebook.com">
-                  <i className="fab fa-facebook-f fa-sm white-text mr-md-5 mr-3 fa-2x">
-                    {" "}
-                  </i>
+                  <i className="fab fa-facebook-f fa-sm white-text mr-md-5 mr-3 fa-2x"></i>
                 </a>
                 <a className="tw-ic" href="https://twitter.com">
-                  <i className="fab fa-twitter fa-sm white-text mr-md-5 mr-3 fa-2x">
-                    {" "}
-                  </i>
+                  <i className="fab fa-twitter fa-sm white-text mr-md-5 mr-3 fa-2x"></i>
                 </a>
                 <a className="li-ic" href="https://linkedin.com">
-                  <i className="fab fa-linkedin-in fa-sm white-text mr-md-5 mr-3 fa-2x">
-                    {" "}
-                  </i>
+                  <i className="fab fa-linkedin-in fa-sm white-text mr-md-5 mr-3 fa-2x"></i>
                 </a>
                 <a className="ins-ic" href="https://instagram.com">
-                  <i className="fab fa-instagram fa-sm white-text mr-md-5 mr-3 fa-2x">
-                    {" "}
-                  </i>
+                  <i className="fab fa-instagram fa-sm white-text mr-md-5 mr-3 fa-2x"></i>
                 </a>
                 <a className="ins-ic" href="https://reddit.com">
-                  <i className="fab fa-reddit fa-sm white-text mr-md-5 mr-3 fa-2x">
-                    {" "}
-                  </i>
+                  <i className="fab fa-reddit fa-sm white-text mr-md-5 mr-3 fa-2x"></i>
                 </a>
                 <h4
                   style={{

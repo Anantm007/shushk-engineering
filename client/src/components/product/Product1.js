@@ -37,10 +37,8 @@ const Product1 = ({ product }) => {
               style={{ fontWeight: "normal !important" }}>
               {renderHTML(product.specification)}
             </p>
-            <h5>
-              <hr className={styles.hr} />
-              <h4>Price per Unit: ₹ {pricePerUnit}</h4>
-            </h5>
+            <hr className={styles.hr} />
+            <h4>Price per Unit: ₹ {pricePerUnit}</h4>
           </div>
           <div className="col-lg-6 px-5 mx-auto">
             <a href={image} target="_blank" rel="noopener noreferrer">
@@ -92,7 +90,7 @@ const Product1 = ({ product }) => {
                       {secondaryImages.length === 3 && (
                         <>
                           <br />
-                          <br />{" "}
+                          <br />
                         </>
                       )}
                       {index === 3 && (
@@ -157,7 +155,7 @@ const Product1 = ({ product }) => {
                     {secondaryImages.length === 3 && (
                       <>
                         <br />
-                        <br />{" "}
+                        <br />
                       </>
                     )}
                     {index === 3 && (

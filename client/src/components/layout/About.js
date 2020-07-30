@@ -73,22 +73,17 @@ const About = () => {
                     <i className="fa fa-home" /> Contact Details
                   </div>
                   <div className="card-body">
-                    <h4>
-                      <strong>Shushk Engineering</strong>
-                    </h4>{" "}
+                    <h4>Shushk Engineering</h4>
                     <br />
                     <p> LLP, 881/17 </p>
                     <p>Faridabad, Haryana - 121002</p>
                     <p>India</p>
                     <p>
-                      <strong>Contact Email:</strong>{" "}
-                      <a href="mailto:a.sharma@shushk.in">
-                        {" "}
-                        a.sharma@shushk.in
-                      </a>
+                      <h6>Contact Email: </h6>
+                      <a href="mailto:a.sharma@shushk.in">a.sharma@shushk.in</a>
                     </p>
                     <p>
-                      <strong>Contact Number:</strong>{" "}
+                      <h6>Contact Number: </h6>
                       <a href="https://wa.me/8447727837">+918447727837</a>
                     </p>
                   </div>

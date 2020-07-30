@@ -5,7 +5,6 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const Product2 = ({ product }) => {
   const {
-    _id,
     name,
     subHeading,
     description,
@@ -34,78 +33,68 @@ const Product2 = ({ product }) => {
               <hr className={styles.hr} />
               <h4>Product specifications:</h4>
               <p className="mb-4">{renderHTML(product.specification)}</p>
-              <h5>
-                <hr className={styles.hr} />
-                <h4>Price per Unit: ₹ {pricePerUnit}</h4>
-              </h5>
+              <hr className={styles.hr} />
+              <h4>Price per Unit: ₹ {pricePerUnit}</h4>
             </div>
           </div>
           <div className="col-lg-6 px-5 mx-auto">
             <div className={styles.blur2}>
-              <a href={image} target="_blank" rel="noopener noreferrer">
-                <img src={image} alt="mainImage" className={styles.mainImage} />
-              </a>
+              <img src={image} alt="mainImage" className={styles.mainImage} />
               <div className={styles.displayBig}>
                 {secondaryImages.map((img, index) => {
                   return (
                     <Fragment key={index}>
-                      <a
-                        href={img}
-                        rel="noopener noreferrer"
-                        target="_blank"
-                        className="d-none d-md-block d-lg-block">
-                        <br />
-                        {index === 0 && (
-                          <img
-                            src={img}
-                            alt="secondaryImg"
-                            style={{
-                              height: "6.4rem",
-                              width: "4rem",
-                              border: "1.5px solid grey",
-                            }}
-                          />
-                        )}
-                        {index === 1 && (
-                          <img
-                            src={img}
-                            alt="secondaryImg"
-                            style={{
-                              height: "4rem",
-                              width: "7.20rem",
-                              border: "1.5px solid grey",
-                            }}
-                          />
-                        )}
-                        {index === 2 && (
-                          <img
-                            src={img}
-                            alt="secondaryImg"
-                            style={{
-                              height: "5rem",
-                              width: "4.48rem",
-                              border: "1.5px solid grey",
-                            }}
-                          />
-                        )}
-                        {secondaryImages.length === 3 && (
-                          <>
-                            <br />
-                            <br />{" "}
-                          </>
-                        )}
-                        {index === 3 && (
-                          <img
-                            src={img}
-                            alt="secondaryImg"
-                            style={{
-                              height: "6.56rem",
-                              width: "5rem",
-                              border: "1.5px solid grey",
-                            }}
-                          />
-                        )}
-                      </a>
+                      <br />
+                      {index === 0 && (
+                        <img
+                          src={img}
+                          alt="secondaryImg"
+                          style={{
+                            height: "6.4rem",
+                            width: "4rem",
+                            border: "1.5px solid grey",
+                          }}
+                        />
+                      )}
+                      {index === 1 && (
+                        <img
+                          src={img}
+                          alt="secondaryImg"
+                          style={{
+                            height: "4rem",
+                            width: "7.20rem",
+                            border: "1.5px solid grey",
+                          }}
+                        />
+                      )}
+                      {index === 2 && (
+                        <img
+                          src={img}
+                          alt="secondaryImg"
+                          style={{
+                            height: "5rem",
+                            width: "4.48rem",
+                            border: "1.5px solid grey",
+                          }}
+                        />
+                      )}
+                      {secondaryImages.length === 3 && (
+                        <>
+                          <br />
+                          <br />
+                        </>
+                      )}
+                      {index === 3 && (
+                        <img
+                          src={img}
+                          alt="secondaryImg"
+                          style={{
+                            height: "6.56rem",
+                            width: "5rem",
+                            border: "1.5px solid grey",
+                          }}
+                        />
+                      )}
                     </Fragment>
                   );
                 })}
@@ -156,7 +145,7 @@ const Product2 = ({ product }) => {
                       {secondaryImages.length === 3 && (
                         <>
                           <br />
-                          <br />{" "}
+                          <br />
                         </>
                       )}
                       {index === 3 && (
@@ -176,18 +165,7 @@ const Product2 = ({ product }) => {
               })}
               <div className="product-buttons mt-3">
                 <div className="row align-items-center">
-                  <div className="col-8">
-                    <div className={styles.buyButton}>
-                      <a href={`/product/${_id}`}>
-                        <button
-                          type="button btn-block"
-                          className="btn btn-block btn-primary btn-circle btn-icon-left">
-                          <i className="fa fa-shopping-cart"></i>
-                          &nbsp;&nbsp; Buy Now
-                        </button>
-                      </a>
-                    </div>
-                  </div>
+                  <div className="col-8"></div>
                 </div>
               </div>
             </div>
