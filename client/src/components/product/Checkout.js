@@ -17,7 +17,7 @@ const Checkout = (props) => {
     address: "",
     zipCode: "",
     phoneNumber: "",
-    quantity: undefined,
+    quantity: 0,
     total: 0,
     error: "",
     success: false,
@@ -73,7 +73,11 @@ const Checkout = (props) => {
     setPincodeError(false);
 
     if (name === "quantity") {
-      setValues({ ...values, total: product.pricePerUnit * e.target.value });
+      setValues({
+        ...values,
+        quantity: e.target.value,
+        total: product.pricePerUnit * e.target.value,
+      });
     }
   };
 

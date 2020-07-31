@@ -1,4 +1,5 @@
 import React, { Fragment, useState, useEffect } from "react";
+import { orderKaksh } from "./apiProduct";
 import Navbar from "../layout/Navbar";
 import Footer from "../layout/Footer";
 import FadeIn from "../layout/FadeIn";
@@ -6,8 +7,9 @@ import FadeIn from "../layout/FadeIn";
 const Payment = () => {
   const [values, setValues] = useState({});
 
-  const handleSubmit = (value) => {
+  const handleSubmit = async (value) => {
     if (value === true) {
+      await orderKaksh(values);
       localStorage.removeItem("values");
     }
 

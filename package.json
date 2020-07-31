@@ -20,6 +20,7 @@
     "express-mongo-sanitize": "^2.0.0",
     "express-validator": "^6.6.0",
     "fs": "0.0.1-security",
+    "google-spreadsheet": "^3.0.11",
     "helmet": "^3.23.3",
     "hpp": "^0.2.3",
     "jsonwebtoken": "^8.5.1",

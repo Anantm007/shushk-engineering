@@ -23,3 +23,21 @@ export const getItem = async (id) => {
       console.log(err);
     });
 };
+
+// Order Kaksh
+export const orderKaksh = async (values) => {
+  return fetch(`/api/order/kaksh`, {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(values),
+  })
+    .then((response) => {
+      return response.json();
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};
