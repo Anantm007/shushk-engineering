@@ -4,32 +4,33 @@ const Schema = mongoose.Schema;
 // Order schema
 const OrderSchema = new Schema(
   {
-    items: [
-      {
-        item: {
-          type: mongoose.Schema.Types.ObjectId,
-          ref: "Item",
-        },
-        quantity: {
-          type: Number,
-          required: true,
-        },
-      },
-    ],
-    customerName: {
+    item: {
       type: String,
       required: true,
     },
-    customerAddress: {
+    quantity: {
       type: String,
       required: true,
     },
-    customerEmail: {
+    name: {
       type: String,
       required: true,
     },
-    customerPhone: {
-      type: Number,
+    address: {
+      type: String,
+      required: true,
+    },
+
+    zipCode: {
+      type: String,
+      required: true,
+    },
+    email: {
+      type: String,
+      required: true,
+    },
+    phoneNumber: {
+      type: String,
       required: true,
     },
   },

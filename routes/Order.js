@@ -12,6 +12,9 @@ const doc = new GoogleSpreadsheet(
   "1jaOI8hAUtt0T81Apym-XAyIGoVtTF1VaN2zDxWeoDjo"
 );
 
+// @route   POST /api/order/kaksh
+// @desc    Create a new Order
+// @access  Public
 router.post("/kaksh", async (req, res) => {
   try {
     await doc.useServiceAccountAuth({
@@ -35,6 +38,11 @@ router.post("/kaksh", async (req, res) => {
       },
     ]);
 
+    // Add order in DB
+    req.body.item = "kaksh";
+    const order = new Order(req.body);
+    await order.save();
+
     return res.json({
       success: true,
       message: "Your order was succesfully placed!",
@@ -42,6 +50,49 @@ router.post("/kaksh", async (req, res) => {
   } catch (err) {
     console.log(err);
     return res.status(500).json({ success: false });
+  }
+});
+
+// @route   POST /api/order/shwaas
+// @desc    Create a new Order
+// @access  Public
+router.post("/shwaas", async (req, res) => {
+  try {
+    await doc.useServiceAccountAuth({
+      client_email: creds.client_email,
+      private_key: creds.private_key,
+    });
+
+    const { name, email, address, zipCode, quantity, phoneNumber } = req.body;
+    await doc.loadInfo();
+    sheet = await doc.sheetsByIndex[1];
+
+    // Add new Record
+    const newRow = await sheet.addRows([
+      {
+        name,
+        email,
+        address,
+        zipCode,
+        quantity,
+        phoneNumber,
+      },
+    ]);
+
+    // Add order in DB
+    req.body.item = "shwaas";
+    const order = new Order(req.body);
+    await order.save();
+
+    return res.json({
+      success: true,
+      message: "Your order was succesfully placed! We will contact you shortly",
+    });
+  } catch (err) {
+    console.log(err);
+    return res
+      .status(500)
+      .json({ success: false, message: "There was an error!" });
   }
 });
 

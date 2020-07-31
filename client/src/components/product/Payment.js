@@ -9,8 +9,14 @@ const Payment = () => {
 
   const handleSubmit = async (value) => {
     if (value === true) {
-      await orderKaksh(values);
-      localStorage.removeItem("values");
+      await orderKaksh(values).then((data) => {
+        if (data.success === true) {
+          localStorage.removeItem("values");
+          alert(data.message);
+        }
+      });
+    } else {
+      alert("Your Order was not placed!");
     }
 
     window.location.pathname = "/";
@@ -37,8 +43,13 @@ const Payment = () => {
                   {values.total && (
                     <>
                       Please transfer the sum of{" "}
-                      <h6 style={{ color: "red" }}>₹ {values.total}</h6> either
-                      through UPI or bank transfer (IMPS preferred)
+                      <h6 style={{ color: "red" }}>
+                        ₹{" "}
+                        {values.total
+                          .toString()
+                          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                      </h6>{" "}
+                      either through UPI or bank transfer (IMPS preferred)
                     </>
                   )}
                 </p>
