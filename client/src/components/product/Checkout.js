@@ -45,6 +45,18 @@ const Checkout = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (
+      name === "" ||
+      address === "" ||
+      email === "" ||
+      phoneNumber === "" ||
+      zipCode === "" ||
+      phoneNumber === "" ||
+      quantity === 0
+    ) {
+      alert("Please fill all the fields to proceed");
+      return;
+    }
     localStorage.setItem("values", JSON.stringify(values));
     window.location.pathname = "/payment";
   };

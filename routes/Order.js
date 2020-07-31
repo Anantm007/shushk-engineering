@@ -45,7 +45,8 @@ router.post("/kaksh", async (req, res) => {
 
     return res.json({
       success: true,
-      message: "Your order was succesfully placed!",
+      message:
+        "Your order was succesfully placed! We will contact you shortly.",
     });
   } catch (err) {
     console.log(err);
@@ -86,7 +87,8 @@ router.post("/shwaas", async (req, res) => {
 
     return res.json({
       success: true,
-      message: "Your order was succesfully placed! We will contact you shortly",
+      message:
+        "Your order was succesfully placed! We will contact you shortly.",
     });
   } catch (err) {
     console.log(err);

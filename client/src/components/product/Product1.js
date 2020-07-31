@@ -38,7 +38,10 @@ const Product1 = ({ product }) => {
               {renderHTML(product.specification)}
             </p>
             <hr className={styles.hr} />
-            <h4>Price per Unit: ₹ {pricePerUnit}</h4>
+            <h4>
+              Price per Unit: ₹{" "}
+              {pricePerUnit.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+            </h4>
             <a href="/faq" target="_blank" rel="noopener noreferrer">
               <button
                 className="btn btn btn-primary"
