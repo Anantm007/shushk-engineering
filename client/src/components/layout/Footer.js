@@ -5,7 +5,12 @@ const Footer = () => {
   const [visitorCount, setVisitorCount] = useState(0);
 
   useEffect(() => {
-    getCount().then((data) => {
+    let inc = false;
+    if (!localStorage.getItem("visitedBefore")) {
+      localStorage.setItem("visitedBefore", JSON.stringify({ visited: true }));
+      inc = true;
+    }
+    getCount(inc).then((data) => {
       if (data.success === true) {
         setVisitorCount(data.visitorCount);
       }
