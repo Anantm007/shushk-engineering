@@ -2,8 +2,11 @@ import React, { Fragment } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import FadeIn from "./FadeIn";
+import { makeStyles } from "@material-ui/core/styles";
 
 const About = () => {
+  const styles = useStyles();
+
   return (
     <Fragment>
       <Navbar />
@@ -33,7 +36,7 @@ const About = () => {
                   engineering with an experience in the HVAC industry.
                 </p>
                 <div className="row" style={{ margin: "auto" }}>
-                  <div className="col-lg-5 col-md-6 mb-4">
+                  <div className="col-lg-4 col-md-6 mb-4 sm-4">
                     <div className="card border-0 shadow">
                       <img
                         src="https://res.cloudinary.com/dazkmglmc/image/upload/v1596268670/aadhar_ik8ohl.png"
@@ -41,6 +44,7 @@ const About = () => {
                         height="240"
                         width="111"
                         alt="aadhar_img"
+                        className={styles.img1}
                       />
                       <div className="card-body text-center">
                         <h5 className="card-title mb-0">Aadhaar R. Sharma</h5>
@@ -108,5 +112,16 @@ const About = () => {
     </Fragment>
   );
 };
+
+const useStyles = makeStyles({
+  img1: {
+    width: "10rem",
+    margin: "auto",
+    "@media screen and (max-width: 400px)": {
+      width: "10rem",
+      margin: "auto",
+    },
+  },
+});
 
 export default About;
