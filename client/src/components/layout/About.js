@@ -14,57 +14,61 @@ const About = () => {
               <div className="col-lg-7 content order-lg-1 order-2">
                 <h1 className="title">Few Words About Our Business</h1>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
+                  Shushk Engineering was born at a time many business were
+                  starving to death, amidst a great pandemic. The two founders,
+                  Aadhaar R Sharma and Rajiv Sharma, are both mechanical
+                  engineers who have a shared vision for the company:
+                  <br />
+                  <br />
+                  We design and build products on the bedrock of
+                  scientifically-established first principles. We are steadfast
+                  in our belief that rigorous and honest engineering is the only
+                  path to a perpetually prosperous society.
+                  <br />
+                  <br />
+                  We are based in Delhi-NCR, India. Rajiv Sharma has 30 years of
+                  Research and Development experience in automotive industry,
+                  with international clients from Europe, North America, and
+                  Eastern Asia. Aadhaar R. Sharma specializes in Thermo-fluid
+                  engineering with an experience in the HVAC industry.
                 </p>
-
-                <div className="icon-box">
-                  <div className="icon">
-                    <i className="fa fa-shopping-bag" />
+                <div className="row" style={{ margin: "auto" }}>
+                  <div class="col-lg-5 col-md-6 mb-4">
+                    <div class="card border-0 shadow">
+                      <img
+                        src="https://res.cloudinary.com/dazkmglmc/image/upload/v1596268670/aadhar_ik8ohl.png"
+                        class="card-img-top"
+                        height="240"
+                        width="111"
+                        alt="aadhar_img"
+                      />
+                      <div class="card-body text-center">
+                        <h5 class="card-title mb-0">Aadhaar R. Sharma</h5>
+                        <div class="card-text text-black-50">Partner</div>
+                        <div class="card-text text-black-50">
+                          Shushk Engineering LLP
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <h4 className="title">
-                    <p style={{ color: "#0000FF" }}>Eiusmod Tempor</p>
-                  </h4>
-                  <p className="description">
-                    Et harum quidem rerum facilis est et expedita distinctio.
-                    Nam libero tempore, cum soluta nobis est eligendi
-                  </p>
-                </div>
-
-                <div
-                  className="icon-box"
-                  data-aos="fade-up"
-                  data-aos-delay="200">
-                  <div className="icon">
-                    <i className="fa fa-photo" />
+                  <div class="col-lg-5 col-md-6 mb-4">
+                    <div class="card border-0 shadow">
+                      <img
+                        src="https://res.cloudinary.com/dazkmglmc/image/upload/v1596268671/rajiv_xokozr.png"
+                        class="card-img-top"
+                        height="240"
+                        width="121"
+                        alt="rajjiv_img"
+                      />
+                      <div class="card-body text-center">
+                        <h5 class="card-title mb-0">Rajiv Sharma</h5>
+                        <div class="card-text text-black-50">Partner</div>
+                        <div class="card-text text-black-50">
+                          Shushk Engineering LLP
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <h4 className="title">
-                    <p style={{ color: "#0000FF" }} hre>
-                      Magni Dolores
-                    </p>
-                  </h4>
-                  <p className="description">
-                    Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum
-                  </p>
-                </div>
-
-                <div
-                  className="icon-box"
-                  data-aos="fade-up"
-                  data-aos-delay="300">
-                  <div className="icon">
-                    <i className="fa fa-bar-chart" />
-                  </div>
-                  <h4 className="title">
-                    <p style={{ color: "#0000FF" }}>Dolor Sitema</p>
-                  </h4>
-                  <p className="description">
-                    Minim veniam, quis nostrud exercitation ullamco laboris nisi
-                    ut aliquip ex ea commodo consequat tarad limino ata
-                  </p>
                 </div>
               </div>
               <div className="col-lg-5 content order-lg-1 order-2">
