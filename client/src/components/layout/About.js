@@ -33,37 +33,37 @@ const About = () => {
                   engineering with an experience in the HVAC industry.
                 </p>
                 <div className="row" style={{ margin: "auto" }}>
-                  <div class="col-lg-5 col-md-6 mb-4">
-                    <div class="card border-0 shadow">
+                  <div className="col-lg-5 col-md-6 mb-4">
+                    <div className="card border-0 shadow">
                       <img
                         src="https://res.cloudinary.com/dazkmglmc/image/upload/v1596268670/aadhar_ik8ohl.png"
-                        class="card-img-top"
+                        className="card-img-top"
                         height="240"
                         width="111"
                         alt="aadhar_img"
                       />
-                      <div class="card-body text-center">
-                        <h5 class="card-title mb-0">Aadhaar R. Sharma</h5>
-                        <div class="card-text text-black-50">Partner</div>
-                        <div class="card-text text-black-50">
+                      <div className="card-body text-center">
+                        <h5 className="card-title mb-0">Aadhaar R. Sharma</h5>
+                        <div className="card-text text-black-50">Partner</div>
+                        <div className="card-text text-black-50">
                           Shushk Engineering LLP
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="col-lg-5 col-md-6 mb-4">
-                    <div class="card border-0 shadow">
+                  <div className="col-lg-5 col-md-6 mb-4">
+                    <div className="card border-0 shadow">
                       <img
                         src="https://res.cloudinary.com/dazkmglmc/image/upload/v1596268671/rajiv_xokozr.png"
-                        class="card-img-top"
+                        className="card-img-top"
                         height="240"
                         width="121"
                         alt="rajjiv_img"
                       />
-                      <div class="card-body text-center">
-                        <h5 class="card-title mb-0">Rajiv Sharma</h5>
-                        <div class="card-text text-black-50">Partner</div>
-                        <div class="card-text text-black-50">
+                      <div className="card-body text-center">
+                        <h5 className="card-title mb-0">Rajiv Sharma</h5>
+                        <div className="card-text text-black-50">Partner</div>
+                        <div className="card-text text-black-50">
                           Shushk Engineering LLP
                         </div>
                       </div>
@@ -86,12 +86,10 @@ const About = () => {
                       <h6>Contact Email: </h6>
                       <a href="mailto:a.sharma@shushk.in">a.sharma@shushk.in</a>
                     </p>
-                    <p>
-                      <h6>Contact Number: </h6>
-                      <a href="https://wa.me/8447727837">+918447727837</a>
-                      <p style={{ textAlign: "center" }}>
-                        (Click to open Whastapp Chat)
-                      </p>
+                    <h6>Contact Number: </h6>
+                    <a href="https://wa.me/8447727837">+918447727837</a>
+                    <p style={{ textAlign: "center" }}>
+                      (Click to open Whastapp Chat)
                     </p>
                   </div>
                 </div>
