@@ -11,6 +11,7 @@ const Checkout = (props) => {
   const [product, setProduct] = useState({});
   const [loading, setLoading] = useState(false);
   const [pincodeError, setPincodeError] = useState(false);
+  const [productPrice, setProductPrice] = useState(0);
   const [values, setValues] = useState({
     name: "",
     email: "",
@@ -19,7 +20,9 @@ const Checkout = (props) => {
     phoneNumber: "",
     quantity: 1,
     total: 0,
+    referral: "",
     error: "",
+    referralSuccess: false,
     success: false,
   });
 
@@ -30,6 +33,8 @@ const Checkout = (props) => {
     zipCode,
     phoneNumber,
     quantity,
+    referral,
+    referralSuccess,
     total,
   } = values;
 
@@ -39,8 +44,11 @@ const Checkout = (props) => {
       if (data.success === true) {
         setLoading(false);
         setProduct(data.item);
-        console.log(data.item);
-        setValues({ ...values, total: data.item.pricePerUnit });
+        setProductPrice(data.item.pricePerUnit);
+        setValues({
+          ...values,
+          total: data.item.pricePerUnit,
+        });
       }
     });
   };
@@ -59,6 +67,10 @@ const Checkout = (props) => {
       alert("Please fill all the fields to proceed");
       return;
     }
+    if (referralSuccess === false) {
+      setValues({ ...values, referral: "" });
+    }
+
     localStorage.setItem("values", JSON.stringify(values));
     window.location.pathname = "/payment";
   };
@@ -90,7 +102,38 @@ const Checkout = (props) => {
       setValues({
         ...values,
         quantity: e.target.value,
-        total: product.pricePerUnit * e.target.value,
+        total: productPrice * e.target.value,
+      });
+    }
+  };
+
+  const handleReferralChange = () => {
+    if (
+      referral === "FRST" ||
+      referral === "SCND" ||
+      referral === "THRD" ||
+      referral === "FRTH" ||
+      referral === "FFTH" ||
+      referral === "SXTH" ||
+      referral === "SVTH" ||
+      referral === "EGTH" ||
+      referral === "NNTH" ||
+      referral === "TNTH" ||
+      referral === "ELTH" ||
+      referral === "TWTH"
+    ) {
+      setProductPrice(product.pricePerUnit - 500);
+      setValues({
+        ...values,
+        total: (product.pricePerUnit - 500) * quantity,
+        referralSuccess: true,
+      });
+    } else {
+      setProductPrice(product.pricePerUnit);
+      setValues({
+        ...values,
+        total: product.pricePerUnit * quantity,
+        referralSuccess: false,
       });
     }
   };
@@ -179,6 +222,21 @@ const Checkout = (props) => {
                             placeholder="Contact Number*"
                             required
                           />
+                        </div>
+                        <div className="form-group">
+                          <input
+                            type="text"
+                            className="form-control"
+                            value={referral}
+                            onChange={handleChange("referral")}
+                            onBlur={() => handleReferralChange()}
+                            placeholder="Referral Code (Optional)"
+                          />
+                          {referralSuccess && (
+                            <div style={{ color: "green" }}>
+                              Referral Code Applied!
+                            </div>
+                          )}
                         </div>
                         <div className="form-group">
                           <input

@@ -22,7 +22,21 @@ router.post("/kaksh", async (req, res) => {
       private_key: creds.private_key,
     });
 
-    const { name, email, address, zipCode, quantity, phoneNumber } = req.body;
+    let {
+      name,
+      email,
+      address,
+      zipCode,
+      quantity,
+      phoneNumber,
+      referral,
+      referralSuccess,
+    } = req.body;
+
+    if (referralSuccess === false) {
+      referral = "";
+    }
+
     await doc.loadInfo();
     sheet = await doc.sheetsByIndex[0];
 
@@ -44,6 +58,7 @@ router.post("/kaksh", async (req, res) => {
         quantity,
         phoneNumber,
         dateAndTime,
+        referral,
       },
     ]);
 
@@ -73,7 +88,21 @@ router.post("/shwaas", async (req, res) => {
       private_key: creds.private_key,
     });
 
-    const { name, email, address, zipCode, quantity, phoneNumber } = req.body;
+    let {
+      name,
+      email,
+      address,
+      zipCode,
+      quantity,
+      phoneNumber,
+      referral,
+      referralSuccess,
+    } = req.body;
+
+    if (referralSuccess === false) {
+      referral = "";
+    }
+
     await doc.loadInfo();
     sheet = await doc.sheetsByIndex[1];
 
@@ -95,6 +124,7 @@ router.post("/shwaas", async (req, res) => {
         quantity,
         phoneNumber,
         dateAndTime,
+        referral,
       },
     ]);
 

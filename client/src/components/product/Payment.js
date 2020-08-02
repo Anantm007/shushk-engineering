@@ -106,7 +106,12 @@ const Payment = () => {
                   <div className="col-lg-6">
                     <button
                       className="btn btn-primary"
-                      style={{ backgroundColor: "red", marginBottom: "2rem" }}
+                      style={{
+                        backgroundColor: "red",
+                        marginBottom: "2rem",
+                        border: "none",
+                        width: "17rem",
+                      }}
                       onClick={() => handleSubmit(false)}>
                       Cancel!
                     </button>
