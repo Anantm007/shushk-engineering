@@ -25,6 +25,7 @@ const Product1 = ({ product }) => {
             borderRadius: "1rem",
             background: "#afaed4",
             margin: ".5rem",
+            marginBottom: "15rem",
           }}>
           <div className="col-lg-6">
             <h1 className="font-weight-light">{name}</h1>
@@ -207,12 +208,6 @@ const Product1 = ({ product }) => {
           </div>
         </div>
       </FadeIn>
-      <>
-        <br />
-        <br />
-        <br />
-        <br />
-      </>
     </Fragment>
   );
 };

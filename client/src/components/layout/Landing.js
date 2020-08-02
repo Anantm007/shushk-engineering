@@ -9,7 +9,7 @@ const Landing = () => {
     <Fragment>
       <Navbar />
       <Products />
-      <Testimonial />
+      {/* <Testimonial /> */}
       <Footer />
     </Fragment>
   );

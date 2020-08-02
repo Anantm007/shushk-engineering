@@ -17,7 +17,7 @@ const Checkout = (props) => {
     address: "",
     zipCode: "",
     phoneNumber: "",
-    quantity: 0,
+    quantity: 1,
     total: 0,
     error: "",
     success: false,
@@ -39,6 +39,8 @@ const Checkout = (props) => {
       if (data.success === true) {
         setLoading(false);
         setProduct(data.item);
+        console.log(data.item);
+        setValues({ ...values, total: data.item.pricePerUnit });
       }
     });
   };

@@ -26,6 +26,14 @@ router.post("/kaksh", async (req, res) => {
     await doc.loadInfo();
     sheet = await doc.sheetsByIndex[0];
 
+    var currentTime = new Date();
+    var currentOffset = currentTime.getTimezoneOffset();
+    var ISTOffset = 330; // IST offset UTC +5:30
+    var ISTTime = new Date(
+      currentTime.getTime() + (ISTOffset + currentOffset) * 60000
+    );
+    const dateAndTime = ISTTime;
+
     // Add new Record
     const newRow = await sheet.addRows([
       {
@@ -35,6 +43,7 @@ router.post("/kaksh", async (req, res) => {
         zipCode,
         quantity,
         phoneNumber,
+        dateAndTime,
       },
     ]);
 
@@ -68,6 +77,14 @@ router.post("/shwaas", async (req, res) => {
     await doc.loadInfo();
     sheet = await doc.sheetsByIndex[1];
 
+    var currentTime = new Date();
+    var currentOffset = currentTime.getTimezoneOffset();
+    var ISTOffset = 330; // IST offset UTC +5:30
+    var ISTTime = new Date(
+      currentTime.getTime() + (ISTOffset + currentOffset) * 60000
+    );
+    const dateAndTime = ISTTime;
+
     // Add new Record
     const newRow = await sheet.addRows([
       {
@@ -77,6 +94,7 @@ router.post("/shwaas", async (req, res) => {
         zipCode,
         quantity,
         phoneNumber,
+        dateAndTime,
       },
     ]);
 

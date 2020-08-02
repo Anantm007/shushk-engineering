@@ -108,7 +108,7 @@ const Payment = () => {
                       className="btn btn-primary"
                       style={{ backgroundColor: "red", marginBottom: "2rem" }}
                       onClick={() => handleSubmit(false)}>
-                      I have not completed the tranfer!
+                      Cancel!
                     </button>
                   </div>
                   <div className="col-lg-6">
@@ -116,7 +116,7 @@ const Payment = () => {
                       className="btn btn-primary"
                       style={{ backgroundColor: "green", border: "none" }}
                       onClick={() => handleSubmit(true)}>
-                      I have completed the tranfer!
+                      I have completed the transfer!
                     </button>
                   </div>
                 </div>
