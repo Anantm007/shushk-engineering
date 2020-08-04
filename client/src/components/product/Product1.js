@@ -43,6 +43,21 @@ const Product1 = ({ product }) => {
               Price per Unit: ₹{" "}
               {pricePerUnit.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
             </h4>
+            <a
+              href="https://drive.google.com/file/d/1u1_Hj-6sYY8gRyl-1ARYiGxpgSNzKclf/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer">
+              <button
+                className="btn btn btn-primary"
+                style={{
+                  margin: "1rem",
+                  width: "12rem",
+                  backgroundColor: "#0000FF",
+                  border: "none",
+                }}>
+                Read more
+              </button>
+            </a>
             <a href="/faq" target="_blank" rel="noopener noreferrer">
               <button
                 className="btn btn btn-primary"
